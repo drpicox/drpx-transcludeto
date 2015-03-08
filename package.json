@@ -1,0 +1,27 @@
+{
+  "name": "drpx-transcludeto",
+  "version": "0.0.1",
+  "description": "An Angular directives/preLinkFunction generator to create multiple transcludes
+paired with transcludeTo/transcludeId",
+  "main": "drpx-transcludeto.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/drpicox/drpx-transcludeto"
+  },
+  "keywords": [
+    "angularjs",
+    "transclude",
+    "transcludeto",
+    "transcludeid",
+    "directive"
+  ],
+  "author": "David Rodenas <david.rodenas@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/drpicox/drpx-transcludeto/issues"
+  },
+  "homepage": "https://github.com/drpicox/drpx-transcludeto"
+}

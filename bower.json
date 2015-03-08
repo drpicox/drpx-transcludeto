@@ -1,0 +1,26 @@
+{
+  "name": "drpx-toggle",
+  "version": "0.0.1",
+  "authors": [
+    "David Rodenas <david.rodenas@gmail.com>"
+  ],
+  "description": "Simple Angular component that provides from a toggle that can be used as model, controller or directive",
+  "main": "README.md",
+  "keywords": [
+    "angularjs",
+    "toggle",
+    "directive"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/drpicox/drpx-toggle",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.2.27"
+  }
+}

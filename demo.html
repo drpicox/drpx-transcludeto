@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>drpx-components - DrpxAccordion demo</title>
+	<style>
+		.box {
+			border: solid 2px black;
+		}
+		.header {
+			background: #ddd;
+			border-bottom: solid 1px black;
+		}
+	</style>
+</head>
+<body ng-app="drpxTranscludeTo.demo">
+	<h2>Transclude To demo</h2>
+
+	<demo-box>
+		<h1 transclude-to="header" style="margin-top: 0;">A header</h1>
+		<p transclude-to="content">
+			Some box text.
+		</p>
+	</demo-box>
+
+	<div ng-controller="DemoController as demo">
+		Demo: {{demo.value}}<br>
+		<demo-list>
+			<span transclude-to="item">
+				{{$parent.item}} - {{$parent.$index}} - {{demo.value}}
+			</span>
+		</demo-list>
+	</div>
+
+
+	<script type="text/ng-template" id="demoBox.html">
+		<div class="box">
+			<div class="header" transclude-id="header" ng-click="toggle()"></div>
+			<div class="content" transclude-id="content" ng-if="visible"></div>
+			<div>Visible: {{visible}}.</div>
+		</div>
+	</script>
+
+	<script type="text/ng-template" id="demoList.html">
+		<div ng-repeat="item in list" transclude-id="item">
+			<div traxnsclude-id="item"></div>
+		</div>
+	</script>
+
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="drpx-transcludeto.js"></script>
+	<script>
+		angular
+			.module('drpxTranscludeTo.demo', [
+				'drpxTranscludeTo'
+			])
+
+			.controller('DemoController', function() {
+				this.value = 'is demo';
+			})
+
+			.directive('demoBox', function(transcludeToPreLink) {
+				return {
+					restrict: 'E',
+					templateUrl: 'demoBox.html',
+					transclude: true,
+					scope: {},
+					link: {pre: transcludeToPreLink(), post: link},
+				};
+
+				function link(scope) {
+					scope.visible = true;
+					scope.toggle = function() {
+						scope.visible = !scope.visible;
+					};
+				}
+			})
+
+			.directive('demoList', function(transcludeToPreLink) {
+				return {
+					restrict: 'E',
+					templateUrl: 'demoList.html',
+					transclude: true,
+					scope: {},
+					link: {pre: transcludeToPreLink(), post: link},
+				};
+
+				function link(scope) {
+					scope.list = ['first','second','third','fourth','fifth'];
+				}
+			})
+
+			;
+	</script>
+
+</body>
+</html>

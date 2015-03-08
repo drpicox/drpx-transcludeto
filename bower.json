@@ -1,18 +1,20 @@
 {
-  "name": "drpx-toggle",
+  "name": "drpx-transcludeto",
   "version": "0.0.1",
   "authors": [
     "David Rodenas <david.rodenas@gmail.com>"
   ],
-  "description": "Simple Angular component that provides from a toggle that can be used as model, controller or directive",
+  "description": "An Angular directives/preLinkFunction generator to create multiple transcludes paired with transcludeTo/transcludeId",
   "main": "README.md",
   "keywords": [
     "angularjs",
-    "toggle",
+    "transclude",
+    "transcludeto",
+    "transcludeid",
     "directive"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/drpicox/drpx-toggle",
+  "homepage": "https://github.com/drpicox/drpx-transcludeto",
   "ignore": [
     "**/.*",
     "node_modules",

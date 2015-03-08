@@ -1,8 +1,7 @@
 {
   "name": "drpx-transcludeto",
   "version": "0.0.1",
-  "description": "An Angular directives/preLinkFunction generator to create multiple transcludes
-paired with transcludeTo/transcludeId",
+  "description": "An Angular directives/preLinkFunction generator to create multiple transcludes paired with transcludeTo/transcludeId",
   "main": "drpx-transcludeto.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

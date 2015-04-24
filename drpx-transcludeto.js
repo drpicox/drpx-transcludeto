@@ -87,9 +87,15 @@
 				return;
 			}
 
-			transcludeTo.transclude(transcludeTo.scope.$new(false, scope), function(clone, newScope) {
+			transcludeTo.transclude(transcludeTo.scope.$new(), function(clone, newScope) {
 				element.empty();
 				element.append(clone);
+
+				newScope.$container = scope;
+
+				element.on('$destroy', function() {
+					newScope.$destroy();
+				});
 			});
 		}
 

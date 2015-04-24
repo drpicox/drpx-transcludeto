@@ -26,7 +26,7 @@
 		Demo: {{demo.value}}<br>
 		<demo-list>
 			<span transclude-to="item">
-				{{$parent.item}} - {{$parent.$index}} - {{demo.value}}
+				{{$container.item}} - {{$container.$index}} - {{demo.value}}
 			</span>
 		</demo-list>
 	</div>

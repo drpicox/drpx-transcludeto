@@ -48,7 +48,7 @@
 
 	function transcludeToPreLink(preLink) {
 		return function(scope, element, attrs, controller, transclude) {
-			transclude(scope);
+			transclude(scope, angular.noop);
 
 			if (preLink) {
 				return preLink.$apply(this, arguments);

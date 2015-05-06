@@ -17,7 +17,7 @@ Imagine that you want to write something like this:
 <my-custom-list>
     <h1 target-to="header">People</h1>
     <div target-to="item">
-        {{$parent.item}}
+        {{$container.item}}
     </div>
     <div target-to="footer">
         <button ng-click="add()">Add</button>

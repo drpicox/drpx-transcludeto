@@ -1,5 +1,8 @@
-drpx-transcludeTo
-=================
+[DEPRECATED] drpx-transcludeTo
+==============================
+
+**This package is deprecated**: please, use current Angular feature present in the core instead https://code.angularjs.org/1.5.0/docs/api/ng/directive/ngTransclude 
+
 
 An Angular directives/preLinkFunction generator to create multiple transcludes
 paired with transcludeTo/transcludeId (like Marionette region or ui-router
